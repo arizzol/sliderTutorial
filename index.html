@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8" />
+            <title>jQuery plugin tut</title>
+            <script src='https://code.jquery.com/jquery-1.11.1.js'></script>            
+            <script src='plugin.js'></script>
+            <script src='script.js'></script>
+            <script src='carousel.js'></script>
+            <style rel='stylesheet'>
+                * {
+                    padding:0;
+                    margin:0;                    
+                }
+                body {
+                    font-family:'Open Sans';
+                }
+                #wrapper {
+                    position:relative;
+                    top:20px;
+                    width:100%;
+                    background-color:rgba(0,100,205,0.8);
+                    box-shadow:0 2px 5px rgba(0,100,205,0.8);
+                    padding:10px;
+                }
+                #canvas {
+                    width:960px;
+                    height:360px;
+                    margin-right:auto;
+                    margin-left:auto;
+                    color:rgba(0,0,0,0.85);
+                    text-shadow:0px 2px 5px rgba(0,100,205,1);
+                }
+                #carousel {
+                    width:480px;
+                    float:left;
+                    overflow:hidden;
+                    height:280px;
+                    margin-left:0px;
+                    background-color:#ccc;
+                    box-shadow:2px 2px 8px rgba(0,100,205,1);
+                }
+                #carousel img {                    
+                    width:480px;                    
+                }
+                #carousel ul {
+                    width:960px;
+                    left:0;
+                }
+                
+                #carousel ul li {
+                    position:relative;
+                    padding:0;
+                    margin:0;
+                    float:left;
+                    list-style-type:none;
+                    text-align:center;                    
+                }
+                #carousel-nav {                    
+                    float:left;
+                    font-size:2em;
+                    opacity:0.7;
+                    font-weight:bold;
+                    text-shadow:0px 2px 5px rgba(0,100,205,1),
+                                -2px -2px 5px rgba(0,100,125,0.8);
+                }
+                #carousel-nav ul li {
+                    list-style-type:none;
+                    float:left;
+                    padding:0 20px;
+                }
+                #carousel-nav ul li a {
+                    text-decoration:none;
+                    color:inherit;
+                }
+            </style>
+        </head>
+        <body>
+            <div id='wrapper'>
+                <div id='canvas'>
+                    <h2></h2>
+                    <div id="carousel">
+                        <ul>
+                            <li><img id="img1" src="./img/elephant.jpg" alt="elephant" /></li>
+                            <li><img id="img2" src="./img/fish.jpg" alt="fish" /></li>
+                        </ul>
+                    </div>
+                    <div id="carousel-nav">
+                        <ul>
+                            <li><a href="#" id="nav-left">&lt;</a></li>
+                            <li><a href="#" id="nav-right">&gt;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
+        </body>
+    </html>
